@@ -1,0 +1,2080 @@
+###𝗖𝗼𝗺𝗽𝗮𝗿𝗶𝘀𝗼𝗻 𝗼𝗳 **𝗡𝗲𝘅𝘁.𝗷𝘀** 𝗮𝗻𝗱 **𝗥𝗲𝗮𝗰𝘁.𝗷𝘀**:
+
+
+## **𝙎𝙞𝙢𝙞𝙡𝙖𝙧𝙞𝙩𝙞𝙚𝙨 𝘽𝙚𝙩𝙬𝙚𝙚𝙣 𝙉𝙚𝙭𝙩.𝙟𝙨 𝙖𝙣𝙙 𝙍𝙚𝙖𝙘𝙩.𝙟𝙨**
+
+1. **Built on React Library**:
+   - Next.js is a framework built on top of React.js, so it uses React's core principles, such as components, props, and state.
+
+2. **Component-Based Architecture**:
+   - Both Next.js and React.js rely on reusable components for building user interfaces.
+
+3. **JSX Syntax**:
+   - Both use JSX (JavaScript XML) for templating, allowing developers to write HTML-like code directly in JavaScript.
+
+4. **Client-Side Rendering**:
+   - Both support client-side rendering (CSR), where JavaScript runs on the client to render the user interface.
+
+5. **Tooling**:
+   - Both use popular developer tools like `npm`/`yarn` for package management and `ESLint` for code quality.
+
+---
+
+### **𝘿𝙞𝙛𝙛𝙚𝙧𝙚𝙣𝙘𝙚𝙨 𝘽𝙚𝙩𝙬𝙚𝙚𝙣 𝙉𝙚𝙭𝙩.𝙟𝙨 𝙖𝙣𝙙 𝙍𝙚𝙖𝙘𝙩.𝙟𝙨**
+
+| Feature                        | **Next.js**                                     | **React.js**                                  |
+|--------------------------------|------------------------------------------------|-----------------------------------------------|
+| **Type**                       | Framework                                      | Library                                       |
+| **Routing**                    | Built-in file-based routing system.            | Needs external libraries like `react-router`. |
+| **Rendering Options**          | Supports SSR, SSG, CSR, and ISR.               | Only supports CSR natively.                   |
+| **Performance**                | Optimized for server-side rendering and SEO.   | Depends on external tools for optimization.   |
+| **SEO**                        | Better SEO support with SSR and SSG.           | SEO is challenging due to CSR limitations.    |
+| **Configuration**              | Comes pre-configured with a robust setup.      | Requires manual setup and configurations.     |
+| **API Routes**                 | Built-in API routing to create backend APIs.   | No built-in API handling; needs external tools like `Express`. |
+| **Build Time**                 | Slower than React due to SSR and pre-rendering.| Faster due to CSR only.                       |
+| **Flexibility**                | Opinionated (imposes structure).               | Unopinionated (fully customizable).           |
+| **Learning Curve**             | Steeper due to its additional features.        | Easier for beginners.                         |
+| **Static Site Generation (SSG)**| Supports pre-rendering static pages at build time. | Not available natively.                       |
+
+---
+
+### **When to Use Next.js**
+- SEO is a priority (e.g., blogs, e-commerce sites).
+- Need server-side rendering (SSR) or static site generation (SSG).
+- Want to build full-stack applications with integrated APIs.
+- Prefer a framework with built-in features like routing and optimizations.
+
+### **When to Use React.js**
+- Building simple or highly interactive client-side applications.
+- Require more control and flexibility over project structure.
+- Already using a custom backend or routing system.
+
+-----------------------------------------
+
+
+
+### 𝐋𝐞𝐚𝐫𝐧 𝐍𝐞𝐱𝐭.𝐣𝐬
+
+Next.js uses the React.js library, so we can say that Next.js is a framework of React.js. This means all React.js code can also be used in Next.js.
+
+-----------------------------------------
+
+## 1. 𝑫𝒊𝒇𝒇𝒆𝒓𝒆𝒏𝒄𝒆 𝑩𝒆𝒕𝒘𝒆𝒆𝒏 𝑵𝒐𝒓𝒎𝒂𝒍 𝑭𝒖𝒏𝒄𝒕𝒊𝒐𝒏 𝒂𝒏𝒅 𝑬𝒙𝒑𝒐𝒓𝒕 𝑫𝒆𝒇𝒂𝒖𝒍𝒕 𝑭𝒖𝒏𝒄𝒕𝒊𝒐𝒏:
+- When we use `export default`, we can import a function without using braces `{}`.  
+  Example:  
+  ```javascript
+  import MyFunction from './MyFile';
+  ```
+- When we do not use `export default`, we must use braces `{}` to import it.  
+  Example:  
+  ```javascript
+  import { MyFunction } from './MyFile';
+  ```
+
+-----------------------------------------
+
+## 𝟐. 𝐂𝐨𝐦𝐩𝐨𝐧𝐞𝐧𝐭𝐬
+
+Components are reusable pieces of code. They work similarly to functions in programming languages like PHP or JavaScript, allowing us to reuse them wherever needed.
+
+### 𝟮.𝟭. 𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲 𝗕𝗲𝘁𝘄𝗲𝗲𝗻 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝘀 𝗮𝗻𝗱 𝗖𝗼𝗺𝗽𝗼𝗻𝗲𝗻𝘁𝘀
+1. Functions:  
+   - It is not mandatory for a function to return a value.  
+   - A function’s name can start with a lowercase letter.  
+2. Components:  
+   - Components always include a `return` statement.  
+   - In React.js or Next.js, component names must start with a capital letter.
+
+-----------------------------------------
+
+## 𝟑. 𝐏𝐫𝐨𝐩𝐬
+
+Data can be passed between components using props, just like in React.js.
+
+-----------------------------------------
+
+## 𝟰. 𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲 𝗕𝗲𝘁𝘄𝗲𝗲𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁 𝗮𝗻𝗱 𝗧𝘆𝗽𝗲𝗦𝗰𝗿𝗶𝗽𝘁
+
+1. JavaScript:  
+   - It performs automatic type conversion; no need to explicitly declare data types (e.g., `int`, `string`, or `boolean`).  
+2. TypeScript:  
+   - Data types must be explicitly declared when defining variables.
+
+-----------------------------------------
+
+## 𝟰. 𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲 𝗕𝗲𝘁𝘄𝗲𝗲𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁 𝗮𝗻𝗱 𝗧𝘆𝗽𝗲𝗦𝗰𝗿𝗶𝗽𝘁
+
+No, the browser cannot directly read TypeScript. The code is first transpiled from TypeScript to JavaScript, and then the browser can execute it.
+
+-----------------------------------------
+
+## 𝟲. 𝗦𝗲𝗿𝘃𝗲𝗿-𝗦𝗶𝗱𝗲 𝗦𝗰𝗿𝗶𝗽𝘁𝗶𝗻𝗴 𝘃𝘀. 𝗖𝗹𝗶𝗲𝗻𝘁-𝗦𝗶𝗱𝗲 𝗦𝗰𝗿𝗶𝗽𝘁𝗶𝗻𝗴
+
+1. Server-Side Scripting:  
+   - Code is executed on the server, generating a response sent to the client.  
+   - Example: Validating user data by querying a database and returning results (e.g., PHP, Java).  
+
+2. Client-Side Scripting:  
+   - Code is executed directly in the browser.  
+   - Example: Validating form fields using JavaScript or jQuery.  
+
+### 6.1. SSR (Server-Side Rendering) vs. CSR (Client-Side Rendering)
+- SSR:  
+  - Generates full HTML on the server and sends it to the client.  
+  - JavaScript is executed on the client for interactive features like button clicks or form submissions.  
+- CSR:  
+  - Generates HTML on the client using JavaScript.  
+  - The user sees a blank page until JavaScript loads and renders the content.
+
+-----------------------------------------
+
+## 𝟳. 𝗘𝘃𝗲𝗻𝘁𝘀, 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝘀, 𝗮𝗻𝗱 𝗦𝘁𝗮𝘁𝗲
+
+### 7.1. State
+1. State is a container used within components to store data or information. It cannot be accessed outside the component.  
+2. To pass state data between components, it must be passed as props, not as the state itself.  
+
+### 𝗡𝗼𝘁𝗲:
+- State updates trigger a component re-render, updating its data wherever used.  
+- Variables do not trigger re-renders when updated.
+
+-----------------------------------------
+
+## 𝟴. 𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲 𝗕𝗲𝘁𝘄𝗲𝗲𝗻 𝗖𝗮𝗹𝗹𝗶𝗻𝗴 𝗮 𝗖𝗼𝗺𝗽𝗼𝗻𝗲𝗻𝘁 𝗜𝗻𝘀𝗶𝗱𝗲 𝗔𝗻𝗼𝘁𝗵𝗲𝗿 𝗖𝗼𝗺𝗽𝗼𝗻𝗲𝗻𝘁 𝘃𝘀. 𝗖𝗮𝗹𝗹𝗶𝗻𝗴 𝗜𝘁 𝗮𝘀 𝗮 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻
+
+1. Using `<Component />` in JSX treats it as a React component, allowing React to manage its lifecycle and state.  
+2. Using `{Component()}` calls the function directly, rendering its return value. However, it does not have access to React's lifecycle or state management.
+
+-----------------------------------------
+
+## 𝟵. 𝗙𝗶𝗹𝗲 𝗮𝗻𝗱 𝗙𝗼𝗹𝗱𝗲𝗿 𝗦𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗲𝘀
+
+### Key Files:
+1. `package.json`:  
+   - Contains commands, dependencies, and project details.  
+   - Used by NPM to install dependencies and run commands.  
+
+2. `next.config.js`:  
+   - Used for Next.js configuration (e.g., setting environment variables, base paths, or custom ESLint rules).  
+
+3. `jsconfig.json` (or `tsconfig.json` for TypeScript):  
+   - Configures JavaScript/TypeScript settings (e.g., CDN, ECMAScript version, or file paths).
+
+-----------------------------------------
+
+##𝗛𝗼𝘄 𝘁𝗼 𝗰𝗿𝗲𝗮𝘁𝗲 𝗹𝗮𝘆𝗼𝘂𝘁𝘀 𝗮𝗻𝗱 𝗽𝗮𝗴𝗲𝘀:
+
+Next.js uses file-system based routing, meaning you can use folders and files to define routes.
+
+A Folder name matches the routes name .
+Page.js should be present in every folder.
+
+
+
+## 𝗪𝗵𝗮𝘁 𝗶𝘀 𝗣𝗮𝘁𝘁𝗲𝗿𝗻 𝗳𝗼𝗿 𝗰𝗿𝗲𝗮𝘁𝗶𝗻𝗴 𝗿𝗼𝘂𝗲𝘁𝘀 𝗶𝗻 𝗡𝗘𝗫𝗧 𝗝𝘀?
+
+=>Inside the src folder  we have folderName=RoutesName which will include page.tsx file 
+
+# DO we need to Install any external package for Next Js Routing?
+=> No in Next there  is no need but it isnee din React Js as in Next Js it has its own Routing 
+---------------------------------------
+##𝗛𝗼𝘄 𝘁𝗼 𝗰𝗿𝗲𝗮𝘁𝗲 𝗹𝗮𝘆𝗼𝘂𝘁𝘀 𝗮𝗻𝗱 𝗽𝗮𝗴𝗲𝘀:
+Next.js uses file-system based routing, meaning you can use folders and files to define routes.
+
+A Folder name matches the route's name.
+Page.js should be present in every folder.
+
+##What is the Pattern for creating routes in Next.js?
+=>Inside the src folder, we have folderName = RouteName, which will include the page.tsx file.
+
+##Do we need to Install any external packages for Next.js Routing?
+=>No, in Next.js there is no need, but it is needed in React.js as Next.js has its own routing.
+
+-----------------------------------------
+###𝗟𝗶𝗻𝗸𝗶𝗻𝗴 𝗮𝗻𝗱 𝗡𝗮𝘃𝗶𝗴𝗮𝘁𝗶𝗼𝗻:
+1. Linking:
+	=>Linking is basically when we move from one screen to another using an anchor tag.
+	=>It is used for actions that won't affect the website at all.
+	=>Done using <Link href=""></Link>
+
+2. Navigation:
+	=>Navigation is the same as above, but here we move using a button tag.
+	=>It is used for actions that affect the website's frontend or backend.
+	=>In order to use it, we have to use the useRouter hook from next/navigation, so we have to make sure the component is Client-Side.
+	=>Done using <button></button>
+
+𝗡𝗼𝘁𝗲: Unlike in React.js, where we need to import any component to use it, in Next.js, there is no need for this as it uses file-system-based routing. Therefore, it automatically imports it.
+
+##𝗡𝗲𝘀𝘁𝗲𝗱 𝗥𝗼𝘂𝘁𝗶𝗻𝗴:
+source/folder/subfolder
+-----------------------------------------
+𝗖𝗼𝗺𝗺𝗮𝗻 𝗟𝗮𝘆𝗼𝘂𝘁:
+
+=>𝗟𝗮𝘆𝗼𝘂𝘁.𝗷𝘀 : It Provide's comman areas to its child rouets/children Components 
+In our NEXTJS Apllication, there RootLayout which is available for every page whatever written inside it will be available for all.
+Example:export default function Layout({children}){
+return(
+    <div>
+        {children}
+    </div>
+)
+}
+
+## 𝗖𝗼𝗻𝗱𝗶𝘁𝗶𝗼𝗻𝗮𝗹 𝗟𝗮𝘆𝗼𝘂𝘁:
+What is Conditional Layout?
+==>A conditional layout refers to dynamically rendering different layouts for your pages or components based on specific conditions. In a web application, a    layout typically consists of shared UI elements like headers, footers, sidebars, or navigation menus, which surround the main content of a page.
+
+	In the context of Next.js, a conditional layout means deciding which layout to render depending on factors such as:
+
+	The route or page being accessed.
+	User authentication or roles (e.g., admin vs. regular user).
+	Device type (mobile vs. desktop).
+	The application's state (e.g., logged-in vs. logged-out).
+		
+#𝗕𝗲𝗻𝗲𝗳𝗶𝘁𝘀 𝗼𝗳 𝗖𝗼𝗻𝗱𝗶𝘁𝗶𝗼𝗻𝗮𝗹 𝗟𝗮𝘆𝗼𝘂𝘁𝘀:
+A conditional layout allows your application to:
+
+=>Dynamically render different layouts for specific pages or sections.
+=>Customize the user experience based on the context (route, user role, etc.).
+=>To implement this in Next.js, you can use the usePathname() hook from next/navigation.
+
+  Here we wil use "usePathname()" from next/navigation
+
+
+-----------------------------------------
+
+##𝗗𝘆𝗻𝗮𝗺𝗶𝗰 𝗥𝗼𝘂𝘁𝗲𝘀**:
+
+### **𝑾𝒉𝒂𝒕 𝒊𝒔 𝑫𝒚𝒏𝒂𝒎𝒊𝒄 𝑹𝒐𝒖𝒕𝒊𝒏𝒈 𝒊𝒏 𝑵𝒆𝒙𝒕.𝒋𝒔?**
+
+In **Next.js**, **dynamic routing** allows you to create routes (URLs) that are not hardcoded but instead dynamically generated based on data or variables. This is particularly useful when building applications where the route structure depends on external data (e.g., user profiles, product pages, blog posts, etc.).
+
+---
+
+### **𝗦𝘁𝗮𝘁𝗶𝗰 𝘃𝘀 𝗗𝘆𝗻𝗮𝗺𝗶𝗰 𝗥𝗼𝘂𝘁𝗲𝘀**
+
+1. **Static Route**:
+   - A route with a fixed path.
+   - Example: `/about`, `/contact`.
+
+2. **Dynamic Route**:
+   - A route with a path that changes based on a parameter or variable.
+   - Example: `/product/[id]`, `/user/[username]`.
+
+---
+
+### **𝑯𝒐𝒘 𝑫𝒚𝒏𝒂𝒎𝒊𝒄 𝑹𝒐𝒖𝒕𝒊𝒏𝒈 𝑾𝒐𝒓𝒌𝒔 𝒊𝒏 𝑵𝒆𝒙𝒕.𝒋𝒔**
+
+1. **Dynamic Segments**:
+   Use square brackets (`[ ]`) in your `pages/` directory to define dynamic routes.
+   
+   Example:
+   ```
+   pages/
+   ├── index.js
+   ├── product/
+   │   ├── [id].js
+   ```
+   - Here, `[id].js` is a **dynamic route**. It can match URLs like `/product/1`, `/product/42`, etc.
+
+2. **Fetching the Dynamic Parameter**:
+   Use the **`useRouter`** hook or the `getStaticProps`/`getServerSideProps` context to fetch the dynamic parameter.
+
+---
+
+### **Example of Dynamic Routing**
+
+#### **Folder Structure**
+```
+pages/
+├── index.js             // Home page
+├── blog/
+│   ├── [slug].js        // Dynamic route for blog posts
+```
+
+#### **Code for a Dynamic Blog Route**
+```jsx
+// pages/blog/[slug].js
+import { useRouter } from "next/router";
+
+export default function BlogPost() {
+  const router = useRouter();
+  const { slug } = router.query; // Dynamic parameter (slug)
+
+  return (
+    <div>
+      <h1>Blog Post: {slug}</h1>
+      <p>This is the blog post content for {slug}.</p>
+    </div>
+  );
+}
+```
+
+- **Access URL**: `/blog/hello-world` → `slug = "hello-world"`
+
+---
+
+### **𝗗𝘆𝗻𝗮𝗺𝗶𝗰 𝗥𝗼𝘂𝘁𝗶𝗻𝗴 𝘄𝗶𝘁𝗵 𝗗𝗮𝘁𝗮 𝗙𝗲𝘁𝗰𝗵𝗶𝗻𝗴**
+
+To render data dynamically, use `getStaticPaths` and `getStaticProps` (or `getServerSideProps`).
+
+#### **Dynamic Route with `getStaticPaths` and `getStaticProps`**
+```jsx
+// pages/blog/[slug].js
+export async function getStaticPaths() {
+  // Fetch all possible slugs (e.g., from an API or database)
+  const posts = await fetch("https://example.com/api/posts").then((res) =>
+    res.json()
+  );
+
+  // Define paths for dynamic routes
+  const paths = posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+  // Fetch data for a specific blog post using the dynamic slug
+  const post = await fetch(
+    `https://example.com/api/posts/${params.slug}`
+  ).then((res) => res.json());
+
+  return {
+    props: { post },
+  };
+}
+
+export default function BlogPost({ post }) {
+  return (
+    <div>
+      <h1>{post.title}</h1>
+      <p>{post.content}</p>
+    </div>
+  );
+}
+```
+
+---
+
+### **𝗔𝗱𝘃𝗮𝗻𝗰𝗲𝗱 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀 𝗼𝗳 𝗗𝘆𝗻𝗮𝗺𝗶𝗰 𝗥𝗼𝘂𝘁𝗶𝗻𝗴**
+
+1. **Catch-All Routes**:
+   - Use `[...param].js` to match multiple segments.
+   - Example: `/blog/[...slug].js` matches `/blog/a`, `/blog/a/b`, `/blog/a/b/c`.
+
+   ```jsx
+   // pages/blog/[...slug].js
+   import { useRouter } from "next/router";
+
+   export default function BlogPost() {
+     const router = useRouter();
+     const { slug } = router.query; // Array of segments
+
+     return <h1>Path: {slug.join("/")}</h1>;
+   }
+   ```
+
+2. **Optional Catch-All Routes**:
+   - Use `[[...param]].js` to make segments optional.
+   - Example: `/blog/[[...slug]].js` matches `/blog`, `/blog/a`, `/blog/a/b`.
+
+---
+
+### **𝗕𝗲𝗻𝗲𝗳𝗶𝘁𝘀 𝗼𝗳 𝗗𝘆𝗻𝗮𝗺𝗶𝗰 𝗥𝗼𝘂𝘁𝗶𝗻𝗴**
+1. **Scalability**:
+   - Add new routes dynamically without updating code.
+2. **SEO-Friendly**:
+   - Use `getStaticProps` and `getStaticPaths` to pre-render pages with unique metadata for each route.
+3. **Flexibility**:
+   - Easily handle complex URL structures like `/product/[category]/[id]`.
+
+---------------------------------------------------
+
+### 𝗥𝗼𝘂𝘁𝗶𝗻𝗴 𝗦𝗲𝗴𝗺𝗲𝗻𝘁𝘀 𝗜𝗻 𝗡𝗲𝘅𝘁 𝗝𝗦:
+
+
+##What are segments  of the Routes?
+=>In Next.js, segments refer to the parts of a URL path that help define the structure and dynamic nature of a route. These segments are represented by folders or files in the pages directory, which map directly to the URL structure of your application.
+
+##𝗧𝘆𝗽𝗲𝘀 𝗼𝗳 𝗥𝗼𝘂𝘁𝗲 𝗦𝗲𝗴𝗺𝗲𝗻𝘁𝘀:
+
+=>𝑺𝒕𝒂𝒕𝒊𝒄 𝑺𝒆𝒈𝒎𝒆𝒏𝒕𝒔:
+	Static segments represent fixed parts of the URL that don’t change.
+	They are created using regular folder or file names in the pages directory.
+Example:
+
+pages/
+|-- about.js
+|-- contact.js
+/about → Maps to about.js.
+/contact → Maps to contact.js.
+=>𝗗𝘆𝗻𝗮𝗺𝗶𝗰 𝗦𝗲𝗴𝗺𝗲𝗻𝘁𝘀:
+  Dynamic segments are placeholders for variable parts of the URL.
+  Represented by square brackets ([ ]) in the file or folder name.
+Example:
+
+pages/
+|-- product/
+    |-- [id].js
+/product/1 → Maps to id = 1.
+/product/42 → Maps to id = 42.
+=>Accessing Dynamic Segments:
+ Use useRouter from next/router or the params object in getStaticProps/getServerSideProps.
+
+
+
+
+##𝗖𝗮𝘁𝗰𝗵-𝗮𝗹𝗹 𝗦𝗲𝗴𝗺𝗲𝗻𝘁𝘀 𝗢𝗳 𝗥𝗼𝘂𝘁𝗲𝘀:
+  In Next.js, catch-all routes allow you to match an arbitrary number of segments in a single route. This is particularly useful when you want a dynamic route to handle multiple nested levels of paths.
+  
+#𝑲𝒆𝒚 𝑷𝒐𝒊𝒏𝒕𝒔 𝒕𝒐 𝑹𝒆𝒎𝒆𝒎𝒃𝒆𝒓:
+	Catch-all route: [...slug] matches one or more segments.
+	Optional catch-all route: [[...slug]] matches zero or more segments.
+	Use the slug array to access the segments.
+	Be mindful of route precedence; catch-all routes should not conflict with more specific dynamic or static routes.
+	Whenever we are not aware that how many segments would be there in thsi case we can use catch-all segments
+
+---------------------------------------
+### 𝟰𝟬𝟰 𝗣𝗮𝗴𝗲𝘀 𝗶𝗻 𝗡𝗘𝗫𝗧𝗝𝗦:
+
+In Next.js, you can create custom 404 pages to display when a user tries to access a route that doesn't exist. 
+Here's everything you need to know about creating and customizing 404 pages in Next.js.
+
+##Default 404 Page
+ If you don't create a custom 404 page, Next.js will automatically display a default 404 page when a route is not found.
+
+##Custom 404 Page
+ =>To create your custom 404 page, follow these steps:
+
+	#File Location
+	->Place the custom 404 page in the pages directory (if you're using the pages directory).
+	->Place it in the app directory as 404.jsx or 404.tsx (if you're using the app directory).
+
+
+##For Global 404 Page:
+=>We have to place 'not-found.js'  file inside app directory.
+
+
+## For Local 404 Page:
+We have make a folder the way we have created for the catch-all segments then we can make our page.tsx with the content we hav tos hwo for this.
+
+
+Note: 
+Generally in a website there is only one 404 page is there which is global but we have make logically if we want  by making use of catch all segments concept. 
+
+
+
+--------------------------------------------------------------------------------------
+## 𝗠𝗶𝗱𝗱𝗹𝗲𝗪𝗮𝗿𝗲  𝗜𝗻 𝗡𝗲𝘅𝘁𝗝𝘀 :
+
+What is MiddleWare In Next Js Routing ?
+=>In Next.js, **middleware** is a feature that allows you to run custom logic before a request is completed. Middleware sits between the request and the response, enabling you to modify the request or response, perform redirects, authenticate users, and more before rendering a page.
+
+### Key Features of Middleware in Next.js:
+1. **Custom Logic Execution**: Middleware enables you to run code before a request is processed.
+2. **Routing Control**: You can rewrite, redirect, or modify the response based on conditions.
+3. **Edge Runtime**: Middleware runs on the Edge Runtime, meaning it is lightweight and has low latency.
+4. **Request-Based**: Middleware works on a per-request basis, allowing granular control over behavior.
+
+---
+
+### Where Middleware is Used:
+1. **Authentication**: Check if a user is logged in and redirect them to a login page if not.
+2. **Localization**: Dynamically route users to a localized version of the site based on their location or preferences.
+3. **Feature Flagging**: Serve different content or enable features based on user roles or other conditions.
+4. **Dynamic Rewrites**: Change the path or query parameters dynamically before rendering a page.
+
+---
+
+### Example Middleware Code:
+To create middleware in Next.js, you use the `middleware.js` file in the root of your project (inside src folder) or in a directory under `pages/src`.
+
+```javascript
+// middleware.js
+import { NextResponse } from 'next/server';
+
+export function middleware(request) {
+  const { pathname } = request.nextUrl;
+
+  // Example: Redirect to login if accessing a protected page
+  if (pathname.startsWith('/dashboard') && !request.cookies.get('authToken')) {
+    return NextResponse.redirect(new URL('/login', request.url));
+  }
+
+  // Example: Add a custom header to the request
+  const response = NextResponse.next();
+  response.headers.set('X-Custom-Header', 'My Middleware Header');
+  return response;
+}
+
+// Specify routes to include or exclude
+export const config = {
+  matcher: ['/dashboard/:path*'], // Apply middleware to specific paths
+};
+```
+
+---
+Note: This middleware code is executed on the server side so if we made any console.log in middware.js  file  only not 'tsx' or 'jsx' is supported here  that wil not be visible.
+
+### Key Objects:
+- **`request`**: Contains information about the incoming HTTP request, such as headers, cookies, and URL.
+- **`NextResponse`**: Provides utility methods like `redirect()`, `rewrite()`, or `next()` to control the request flow.
+
+---
+
+### Matcher Configuration:
+You can control which routes the middleware applies to by defining a `matcher` in the `config` export.
+
+Example:
+```javascript
+export const config = {
+  matcher: ['/about/:path*', '/dashboard/:path*'],
+};
+```
+
+---
+
+### Key Benefits:
+1. **Serverless by Default**: Middleware is executed on the edge, making it highly efficient.
+2. **Improved User Experience**: By redirecting, rewriting, or adding headers dynamically, you can improve the user experience.
+3. **Granular Control**: Middleware lets you target specific routes and customize behavior.
+
+
+--------------------------------------------------------------------------------------
+
+### **𝗥𝗲𝗻𝗱𝗲𝗿𝗶𝗻𝗴 𝗶𝗻 𝗡𝗲𝘅𝘁.𝗷𝘀**   🚀
+
+ 
+ => **What is Rendering?**  
+Rendering refers to the process of converting React components into HTML that users can see in the browser. In **Next.js**, rendering determines how and when a page's content is generated.  
+
+Next.js provides multiple rendering strategies to optimize performance and SEO.  
+
+---
+
+## Types Of Rendering Environments :
+=>Client-Side Environment: Inside Client environment our code comes on browser and then HTML is converted(rendered) from our code  
+=>Server-Side Environment:
+
+
+## **𝗧𝘆𝗽𝗲𝘀 𝗼𝗳 𝗥𝗲𝗻𝗱𝗲𝗿𝗶𝗻𝗴 𝗶𝗻 𝗡𝗲𝘅𝘁.𝗷𝘀**  
+
+### **𝟭️⃣ 𝗣𝗿𝗲-𝗥𝗲𝗻𝗱𝗲𝗿𝗶𝗻𝗴 (𝗥𝗲𝗰𝗼𝗺𝗺𝗲𝗻𝗱𝗲𝗱)**
+Pre-rendering means that Next.js generates the HTML for a page **before** it is sent to the client, improving performance and SEO.  
+ or
+Generate the HTML in advance on the server side .
+
+**𝙏𝙮𝙥𝙚𝙨 𝙤𝙛 𝙋𝙧𝙚-𝙍𝙚𝙣𝙙𝙚𝙧𝙞𝙣𝙜:**  
+
+#### ✅ **𝑺𝒕𝒂𝒕𝒊𝒄 𝑮𝒆𝒏𝒆𝒓𝒂𝒕𝒊𝒐𝒏 (𝑺𝑺𝑮) – 𝑩𝒆𝒔𝒕 𝒇𝒐𝒓 𝑷𝒆𝒓𝒇𝒐𝒓𝒎𝒂𝒏𝒄𝒆 & 𝑺𝑬𝑶**  
+- The page is generated **at build time** and reused for every request.  
+- It’s **super fast** since the HTML is pre-built and cached.  
+- **Use when:** Content doesn’t change often (e.g., blogs, product pages).  
+- In this both the 'Server and Client' Components  (page) can be prerendered on the server at the build time.
+
+🔹 **Example (SSG with `getStaticProps`)**  
+```javascript
+export async function getStaticProps() {
+  const res = await fetch('https://api.example.com/data');
+  const data = await res.json();
+
+  return { props: { data } };
+}
+
+export default function Page({ data }) {
+  return <div>{data.title}</div>;
+}
+```
+
+📌 **Generated once at build time, served to all users.**
+
+---
+
+#### ✅ **𝑺𝒆𝒓𝒗𝒆𝒓-𝑺𝒊𝒅𝒆 𝑹𝒆𝒏𝒅𝒆𝒓𝒊𝒏𝒈 (𝑺𝑺𝑹) – 𝑮𝒐𝒐𝒅 𝒇𝒐𝒓 𝑺𝑬𝑶 & 𝑹𝒆𝒂𝒍-𝒕𝒊𝒎𝒆 𝑫𝒂𝒕𝒂**  
+- The page is generated **on each request** (not at build time).(generate on dynamic time)  
+- Ideal for **dynamic content** that must always be fresh (e.g., user dashboards, stock prices).  
+- **Use when:** Content updates frequently or is user-specific.  
+
+🔹 **Example (SSR with `getServerSideProps`)**  
+```javascript
+export async function getServerSideProps() {
+  const res = await fetch('https://api.example.com/data');
+  const data = await res.json();
+
+  return { props: { data } };
+}
+
+export default function Page({ data }) {
+  return <div>{data.title}</div>;
+}
+```
+
+📌 **Generated every time a request is made.**
+
+---
+
+### **𝟮️⃣ 𝗖𝗹𝗶𝗲𝗻𝘁-𝗦𝗶𝗱𝗲 𝗥𝗲𝗻𝗱𝗲𝗿𝗶𝗻𝗴 (𝗖𝗦𝗥) – 𝗙𝗼𝗿 𝗜𝗻𝘁𝗲𝗿𝗮𝗰𝘁𝗶𝘃𝗶𝘁𝘆**  
+- The page is rendered **in the browser** after loading.  
+- Content is fetched **after the initial load**, making it slower for SEO.  
+- **Use when:** SEO is not a concern, but interactivity is needed (e.g., dashboards, chat apps).  
+
+🔹 **Example (CSR using `useEffect`)**  
+```javascript
+import { useState, useEffect } from 'react';
+
+export default function Page() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch('https://api.example.com/data')
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
+
+  return <div>{data ? data.title : 'Loading...'}</div>;
+}
+```
+
+📌 **Data is fetched on the client side after the page loads.**
+
+------
+### **3️⃣ 𝑰𝒏𝒄𝒓𝒆𝒎𝒆𝒏𝒕𝒂𝒍 𝑺𝒕𝒂𝒕𝒊𝒄 𝑹𝒆𝒈𝒆𝒏𝒆𝒓𝒂𝒕𝒊𝒐𝒏 (𝑰𝑺𝑹) – 𝑩𝒆𝒔𝒕 𝒐𝒇 𝑩𝒐𝒕𝒉 𝑾𝒐𝒓𝒍𝒅𝒔** 
+
+ =>ISR allows **updating static pages** without rebuilding the entire site. This combines the speed of **Static Site Generation (SSG)** with the flexibility of **Server-Side Rendering (SSR)**.  
+
+### **🔹 How ISR Works:**  
+1. The page is **pre-built at build time** (like SSG).  
+2. When a request is made, the old static page is served immediately.  
+3. **In the background**, Next.js regenerates the page based on a `revalidate` interval.  
+4. The new version replaces the old one after regeneration.  
+
+### **✅ Advantages of ISR:**  
+✔️ **Fast performance** (serves pre-rendered pages).  
+✔️ **Fresh data** without rebuilding the entire site.  
+✔️ **Great for SEO** (full HTML available).  
+✔️ **Efficient** (only regenerates necessary pages).  
+
+### **🔹 Example of ISR in Next.js:**  
+```javascript
+export async function getStaticProps() {
+  const res = await fetch('https://api.example.com/data');
+  const data = await res.json();
+
+  return {
+    props: { data },
+    revalidate: 10, // Regenerate the page every 10 seconds
+  };
+}
+
+export default function Page({ data }) {
+  return <div>{data.title}</div>;
+}
+```
+📌 **Old content is served instantly, and the new version is updated in the background every 10 seconds.**  
+
+### **🔹 When to Use ISR?**  
+
+✅ Blogs, News, E-commerce, Product Listings (where content updates occasionally).  
+
+🚀 **ISR is the perfect balance between speed and freshness!**
+
+### **3️⃣ 𝑰𝒏𝒄𝒓𝒆𝒎𝒆𝒏𝒕𝒂𝒍 𝑺𝒕𝒂𝒕𝒊𝒄 𝑹𝒆𝒈𝒆𝒏𝒆𝒓𝒂𝒕𝒊𝒐𝒏 (𝑰𝑺𝑹) – in short: 
+- Allows **updating static pages** without a full rebuild.  
+- Next.js regenerates the page **in the background** while serving old content.  
+- **Use when:** You need pre-rendering but with occasional updates (e.g., news, product listings).  
+
+🔹 **Example (ISR with `revalidate`)**  
+```javascript
+export async function getStaticProps() {
+  const res = await fetch('https://api.example.com/data');
+  const data = await res.json();
+
+  return {
+    props: { data },
+    revalidate: 10, // Rebuild the page every 10 seconds
+  };
+}
+```
+
+📌 **Combines the speed of SSG with the flexibility of SSR.**
+
+
+
+----------
+
+### **🚀 Which Rendering Method to Choose?**  
+| Feature | **SSG** | **SSR** | **CSR** | **ISR** |
+|---------|--------|--------|--------|--------|
+| Speed | 🚀🚀🚀 (Fastest) | 🚀 (Slow) | 🚀🚀 (Fast after load) | 🚀🚀🚀 (Fast + Updatable) |
+| SEO | ✅ Best | ✅ Good | ❌ Bad | ✅ Good |
+| Data Freshness | ❌ Stale | ✅ Always Fresh | ✅ Always Fresh | ✅ Updated in intervals |
+| Use Case | Blogs, Landing Pages | Dashboards, User-specific Content | Interactive Apps | News, E-commerce |
+
+---
+
+🔹 Conclusion
+ 1.Use CSR for highly interactive apps where SEO doesn’t matter (e.g., admin panels, dashboards).
+ 2.Use SSG for static pages with content that doesn’t change often (e.g., blogs, landing pages).
+ 3.Use SSR for pages that need real-time data on each request (e.g., user dashboards).
+ 4.Use ISR to get the best of both SSG & SSR (pre-rendered but updated automatically).
+
+
+
+
+
+--------------------------------------------------------------------------------
+## **𝗖𝗹𝗶𝗲𝗻𝘁-𝗦𝗶𝗱𝗲 𝗥𝗲𝗻𝗱𝗲𝗿𝗶𝗻𝗴 (𝗖𝗦𝗥) 𝘃𝘀 𝗣𝗿𝗲-𝗥𝗲𝗻𝗱𝗲𝗿𝗶𝗻𝗴 (𝗦𝗦𝗚 & 𝗦𝗦𝗥) 𝗶𝗻 𝗡𝗲𝘅𝘁.𝗷𝘀** 🚀  
+
+Both **Client-Side Rendering (CSR)** and **Pre-Rendering (SSG & SSR)** are rendering techniques in Next.js, but they work differently in terms of performance, SEO, and when the content is loaded.  
+
+---
+
+## **𝟭️⃣ 𝗖𝗹𝗶𝗲𝗻𝘁-𝗦𝗶𝗱𝗲 𝗥𝗲𝗻𝗱𝗲𝗿𝗶𝗻𝗴 (𝗖𝗦𝗥)**
+**CSR means the page is rendered in the browser (client-side) after the initial page load.** The HTML returned by the server is minimal, and React takes over to render content dynamically.
+
+### **🔹 How It Works:**
+1. The browser **downloads a basic HTML shell** (with minimal content).  
+2. React takes over and fetches the required data **via JavaScript (useEffect, API calls, etc.)**.  
+3. The page is rendered dynamically **after the data is loaded**.  
+
+### **✅ Advantages of CSR**
+✔️ Fast subsequent page navigation (since everything is managed client-side).  
+✔️ Good for highly interactive applications like dashboards, social feeds, or chat apps.  
+✔️ Reduced load on the server since most work is done on the client.  
+
+### **❌ Disadvantages of CSR**
+❌ Initial page load is slow since the user sees a blank screen until JavaScript loads.  
+❌ **Bad for SEO** because search engines may not wait for JavaScript to execute.  
+❌ Requires more **JavaScript** to run in the browser, affecting performance.  
+
+### **🔹 Example of CSR in Next.js**
+```javascript
+import { useState, useEffect } from 'react';
+
+export default function Page() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch('https://api.example.com/data')
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
+
+  return <div>{data ? data.title : 'Loading...'}</div>;
+}
+```
+📌 **The page initially loads without data, then fetches and renders it on the client-side.**  
+
+---
+
+## **𝟮️⃣ 𝗣𝗿𝗲-𝗥𝗲𝗻𝗱𝗲𝗿𝗶𝗻𝗴 (𝗦𝗦𝗚 & 𝗦𝗦𝗥)**
+**Pre-Rendering means Next.js generates the HTML for a page before sending it to the browser.** This improves performance and SEO since users receive a fully-formed HTML page.
+
+Pre-Rendering has **two types**:  
+1. **Static Generation (SSG) – Page is built at build time**  
+2. **Server-Side Rendering (SSR) – Page is built at request time**  
+
+---
+
+### **🔹 Static Site Generation (SSG)**
+**SSG generates the page at build time and serves a static HTML file for every request.**  
+This is the fastest and best for SEO.  
+
+#### ✅ **Advantages of SSG**
+✔️ **Best performance** (Pre-built pages load instantly).  
+✔️ **Great for SEO** since search engines see full HTML.  
+✔️ Can use caching/CDN for super-fast delivery.  
+
+#### ❌ **Disadvantages of SSG**
+❌ Not good for dynamic content that changes frequently (since pages are built at deploy time).  
+❌ Requires a full rebuild to update content.  
+
+#### **🔹 Example of SSG**
+```javascript
+export async function getStaticProps() {
+  const res = await fetch('https://api.example.com/data');
+  const data = await res.json();
+
+  return { props: { data } };
+}
+
+export default function Page({ data }) {
+  return <div>{data.title}</div>;
+}
+```
+📌 **This page is generated once during the build and served as a static file.**  
+
+---
+
+### **🔹 Server-Side Rendering (SSR)**
+**SSR generates the page on every request, ensuring fresh data each time.**  
+It’s useful for **real-time data** like dashboards, stock prices, or user profiles.
+
+#### ✅ **Advantages of SSR**
+✔️ **Always fresh data** (fetched at the time of request).  
+✔️ **Good for SEO** (since search engines see full HTML).  
+
+#### ❌ **Disadvantages of SSR**
+❌ **Slower than SSG** because pages are generated on every request.  
+❌ **Higher server load** (since it runs a function for every request).  
+
+#### **🔹 Example of SSR**
+```javascript
+export async function getServerSideProps() {
+  const res = await fetch('https://api.example.com/data');
+  const data = await res.json();
+
+  return { props: { data } };
+}
+
+export default function Page({ data }) {
+  return <div>{data.title}</div>;
+}
+```
+📌 **The page is generated dynamically for every request.**  
+
+---
+
+## **🚀 CSR vs Pre-Rendering: Key Differences**
+| Feature | **Client-Side Rendering (CSR)** | **Static Generation (SSG)** | **Server-Side Rendering (SSR)** |
+|---------|--------------------------------|-----------------------------|-----------------------------|
+| **Rendering Time** | In the browser (after page load) | At build time (before request) | At request time (on server) |
+| **Performance** | 🚀 Good after initial load | 🚀🚀🚀 Best (Pre-rendered) | 🚀🚀 Medium (Generated per request) |
+| **SEO** | ❌ Bad (Search engines may not execute JavaScript) | ✅ Best (Full HTML available) | ✅ Good (Full HTML available) |
+| **Data Freshness** | ✅ Always Fresh | ❌ Stale (until rebuild) | ✅ Always Fresh |
+| **Use Case** | Dashboards, Single Page Apps (SPAs) | Blogs, Marketing Pages, E-commerce | Real-time data, User-specific content |
+
+---
+
+## **🌟 When to Use What?**
+| Scenario | Best Rendering Method |
+|----------|---------------------|
+| Blog, Static Pages | ✅ SSG (Fast + SEO) |
+| Dashboard, User Profiles | ✅ SSR (Fresh Data) |
+| Real-time updates (Chat, Live Prices) | ✅ CSR (Fast Interaction) |
+| E-commerce (Products) | ✅ ISR (SSG + Automatic Updates) |
+
+---
+
+## **🔹 Conclusion**
+- **Use CSR** for highly interactive apps where SEO doesn’t matter (e.g., admin panels, dashboards).
+- **Use SSG** for static pages with content that doesn’t change often (e.g., blogs, landing pages).
+- **Use SSR** for pages that need real-time data on each request (e.g., user dashboards).
+- **Use ISR** to get the best of both SSG & SSR (pre-rendered but updated automatically).
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+#### 𝗙𝗘𝗧𝗖𝗛 𝗗𝗔𝗧𝗔 𝗙𝗿𝗼𝗺 𝗔𝗣𝗜  𝗜𝗻 𝗖𝗹𝗶𝗲𝗻𝘁 𝗖𝗼𝗺𝗽𝗼𝗻𝗲𝗻𝘁:
+
+
+A page is UI that is rendered on a specific route. To create a page, add a page file inside the app directory and default export a React component. For example, to create an index page (/):
+
+##Creating a layout
+A layout is UI that is shared between multiple pages. On navigation, layouts preserve state, remain interactive, and do not rerender.
+
+You can define a layout by default exporting a React component from a layout file. The component should accept a children prop which can be a page or another layout.
+
+For example, to create a layout that accepts your index page as child, add a layout file inside the app directory:
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body>
+        {/* Layout UI */}
+        {/* Place children where you want to render a page or nested layout */}
+        <main>{children}</main>
+      </body>
+    </html>
+  )
+}
+
+Note:
+The layout above is called a root layout because it's defined at the root of the app directory.
+The root layout is required and must contain html and body tags.
+
+
+-------------------------------------------------
+
+## **𝑪𝒍𝒊𝒆𝒏𝒕 𝑪𝒐𝒎𝒑𝒐𝒏𝒆𝒏𝒕 𝑰𝒏𝒔𝒊𝒅𝒆 𝒂 𝑺𝒆𝒓𝒗𝒆𝒓 𝑪𝒐𝒎𝒑𝒐𝒏𝒆𝒏𝒕 𝒊𝒏 𝑵𝒆𝒙𝒕.𝒋𝒔** 🚀  
+
+### **🔹 Understanding Server & Client Components**  
+In **Next.js**, components are **Server Components by default**. However, if you need to use **state, hooks, or event handlers (like `onClick`)**, you must use a **Client Component**.  
+
+Since **Client Components cannot be used directly inside Server Components**, we need to **separate them** and then import them inside the Server Component.
+
+---
+
+## **𝟭️⃣ 𝗪𝗵𝘆 𝗗𝗼 𝗪𝗲 𝗡𝗲𝗲𝗱 𝗮 𝗖𝗹𝗶𝗲𝗻𝘁 𝗖𝗼𝗺𝗽𝗼𝗻𝗲𝗻𝘁?**
+Server Components **cannot use:**
+❌ React Hooks (`useState`, `useEffect`)  
+❌ `onClick` or any event handlers  
+❌ Browser APIs (`localStorage`, `window`, `document`)  
+
+Client Components **can use:**  
+✅ `useState`, `useEffect`, `useContext`  
+✅ `onClick`, `onChange`, and other events  
+✅ Interact with the browser (DOM, `localStorage`)  
+
+---
+
+## **2️⃣ 𝑯𝒐𝒘 𝒕𝒐 𝑼𝒔𝒆 𝒂 𝑪𝒍𝒊𝒆𝒏𝒕 𝑪𝒐𝒎𝒑𝒐𝒏𝒆𝒏𝒕 𝑰𝒏𝒔𝒊𝒅𝒆 𝒂 𝑺𝒆𝒓𝒗𝒆𝒓 𝑪𝒐𝒎𝒑𝒐𝒏𝒆𝒏𝒕?**
+
+### **✅ Step 1: Create a Client Component**
+In a separate file (e.g., `Counter.js`), add this:  
+```javascript
+"use client"; // 👈 This makes it a Client Component
+import { useState } from "react";
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <h2>Counter: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+📌 **𝑾𝒉𝒚 `"𝒖𝒔𝒆 𝒄𝒍𝒊𝒆𝒏𝒕";`?**  
+It tells Next.js that this file should be treated as a **Client Component**.
+
+---
+
+### **✅ Step 2: Import the Client Component in a Server Component**
+Now, import and use the `Counter` component inside a **Server Component** (e.g., `page.js`):  
+```javascript
+import Counter from "./Counter"; // Import Client Component
+
+export default async function HomePage() {
+  return (
+    <div>
+      <h1>Server Component with a Client Component</h1>
+      <Counter /> {/* ✅ Using a Client Component */}
+    </div>
+  );
+}
+```
+📌 **The `Counter` component remains interactive** while the **parent component (HomePage) is still a Server Component**.
+
+---
+
+## **3️⃣ Can We Use Server Components Inside Client Components?**
+✅ **Yes!** A Client Component **can import and use Server Components**.  
+✅ This is useful when you need dynamic behavior but still want to fetch data on the server.  
+
+### **🔹 Example**
+```javascript
+import ServerData from "./ServerData"; // Server Component
+
+export default function ClientWrapper() {
+  return (
+    <div>
+      <h1>This is a Client Component</h1>
+      <ServerData /> {/* ✅ Using a Server Component inside a Client Component */}
+    </div>
+  );
+}
+```
+
+---
+
+## **𝟰️⃣ 𝗕𝗲𝘀𝘁 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲𝘀 𝗳𝗼𝗿 𝗦𝗲𝗿𝘃𝗲𝗿 & 𝗖𝗹𝗶𝗲𝗻𝘁 𝗖𝗼𝗺𝗽𝗼𝗻𝗲𝗻𝘁𝘀**
+| Feature | **Server Component** | **Client Component** |
+|---------|---------------------|---------------------|
+| Data Fetching | ✅ Best for fetching from APIs, databases | ❌ Should not fetch data |
+| React Hooks (`useState`, `useEffect`) | ❌ Not allowed | ✅ Allowed |
+| Event Handlers (`onClick`, `onChange`) | ❌ Not allowed | ✅ Allowed |
+| Performance | 🚀 Faster, less JavaScript | ❌ More JavaScript, affects performance |
+| When to Use? | Rendering static/dynamic content | Interactive elements (buttons, forms, modals) |
+
+---
+
+## **𝟱️⃣ 𝗞𝗲𝘆 𝗧𝗮𝗸𝗲𝗮𝘄𝗮𝘆𝘀**
+✅ **Server Components** are default in Next.js and **do not support interactivity**.  
+✅ **Client Components** allow interactivity but **must be declared using `"use client"`**.  
+✅ **Best practice** is to keep most components **server-side** and only use Client Components where necessary.  
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+###𝗖𝗦𝗦 𝗠𝗼𝗱𝘂𝗹𝗲𝘀 𝗪𝗶𝘁𝗵 𝗡𝗘𝗫𝗧𝗝𝗦:
+
+
+### **1️⃣ What is a CSS Module in Next.js?**
+A **CSS Module** in Next.js is a **scoped CSS file** where styles are applied **only to a specific component** instead of affecting the entire application.  
+
+✅ **Automatically scoped** (No class name conflicts)  
+✅ **Works only inside the component where it's imported**  
+✅ **Best for component-based styling**  
+
+---
+## **𝗖𝗦𝗦 𝗠𝗼𝗱𝘂𝗹𝗲𝘀 𝗶𝗻 𝗡𝗲𝘅𝘁.𝗷𝘀 𝘃𝘀 𝗡𝗼𝗿𝗺𝗮𝗹 𝗖𝗦𝗦 𝗶𝗻 𝗡𝗲𝘅𝘁.𝗷𝘀**  
+
+### **2️⃣ Difference Between CSS Modules & Normal CSS in Next.js**
+| Feature | **CSS Module (`.module.css`)** | **Normal CSS (`.css`)** |
+|---------|------------------------------|-------------------------|
+| **Scope** | Local (Only applies to imported component) | Global (Affects entire project) |
+| **Class Name Conflicts** | No conflicts (Scoped styles) | Possible conflicts (Global scope) |
+| **Performance** | Better (Only loads styles needed) | May load unused styles |
+| **Usage** | Best for component-specific styles | Best for global styles (e.g., Reset, Layout) |
+| **Syntax** | `import styles from './file.module.css'` | `import './global.css'` |
+
+---
+
+### **3️⃣ 𝑯𝒐𝒘 𝒕𝒐 𝑼𝒔𝒆 𝑪𝑺𝑺 𝑴𝒐𝒅𝒖𝒍𝒆𝒔 𝒊𝒏 𝑵𝒆𝒙𝒕.𝒋𝒔?**
+#### **✅ Step 1: Create a CSS Module File**
+Create a file like **`styles/Button.module.css`**:  
+```css
+/* styles/Button.module.css */
+.button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+```
+
+#### **✅ Step 2: Import and Use It in a Component**
+Now, use it inside a **React Component**:  
+```javascript
+import styles from '../styles/Button.module.css'; // Import the module
+
+export default function Button() {
+  return <button className={styles.button}>Click Me</button>;
+}
+```
+📌 **Notice:** We access styles as an object (`styles.button`) instead of just `"button"`.
+
+---
+
+### **4️⃣ 𝑯𝒐𝒘 𝒕𝒐 𝑼𝒔𝒆 𝑮𝒍𝒐𝒃𝒂𝒍 𝑪𝑺𝑺 𝒊𝒏 𝑵𝒆𝒙𝒕.𝒋𝒔?**
+If you want to use normal **global CSS**, create a file like **`styles/globals.css`** and import it in `_app.js`:  
+```css
+/* styles/globals.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+```
+Then, import it inside `_app.js` (or `layout.js` in Next.js 13+):
+```javascript
+import '../styles/globals.css';
+
+export default function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+}
+```
+
+---
+
+### **5️⃣ 𝑪𝒂𝒏 𝒀𝒐𝒖 𝑼𝒔𝒆 𝑩𝒐𝒕𝒉 𝑪𝑺𝑺 𝑴𝒐𝒅𝒖𝒍𝒆𝒔 & 𝑵𝒐𝒓𝒎𝒂𝒍 𝑪𝑺𝑺 𝒊𝒏 𝑶𝒏𝒆 𝑷𝒓𝒐𝒋𝒆𝒄𝒕?**
+✅ **Yes!**  
+- **Use Global CSS (`globals.css`)** for site-wide styles like layout, typography, and resets.  
+- **Use CSS Modules (`.module.css`)** for component-specific styles to avoid conflicts.  
+
+---
+
+### **6️⃣ 𝑲𝒆𝒚 𝑻𝒂𝒌𝒆𝒂𝒘𝒂𝒚𝒔**
+🔹 **CSS Modules** are local and scoped to specific components (Best for modular styling).  
+🔹 **Normal CSS** applies styles globally (Best for global styles like layout and resets).  
+🔹 **Using CSS Modules prevents class name conflicts** and improves **performance**.  
+
+---------
+##𝘾𝙤𝙣𝙙𝙞𝙩𝙞𝙤𝙣𝙖𝙡 𝘾𝙎𝙎 𝙈𝙤𝙙𝙪𝙡𝙚𝙨 𝙞𝙣 𝙉𝙚𝙭𝙩.𝙟𝙨 🚀
+In Next.js, CSS Modules allow you to write scoped styles without affecting other components. 
+You can also apply conditional CSS classes based on state or props.
+
+✅ 3️⃣ 𝑨𝒑𝒑𝒍𝒚𝒊𝒏𝒈 𝑪𝑺𝑺 𝑪𝒐𝒏𝒅𝒊𝒕𝒊𝒐𝒏𝒂𝒍𝒍𝒚 𝒊𝒏 𝑵𝒆𝒙𝒕.𝒋𝒔
+	📌 Use CSS Module in a React component:
+
+	import { useState } from "react";
+	import styles from "@/styles/Button.module.css"; // Importing the CSS module
+
+	export default function ConditionalButton() {
+	  const [isActive, setIsActive] = useState(false);
+
+	  return (
+		<button
+		  className={`${styles.button} ${isActive ? styles.active : styles.inactive}`}
+		  onClick={() => setIsActive(!isActive)}
+		>
+		  {isActive ? "Active" : "Inactive"}
+		</button>
+	  );
+	}
+ =>🔹 How It Works:
+		1.The base class styles.button is always applied.
+		2.If isActive = true, styles.active is applied (button turns green).
+		3.If isActive = false, styles.inactive is applied (button turns red).
+		4.Button text toggles between "Active" and "Inactive" on click.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+## **🚀 𝗜𝗺𝗮𝗴𝗲 𝗢𝗽𝘁𝗶𝗺𝗶𝘇𝗮𝘁𝗶𝗼𝗻 𝗶𝗻 𝗡𝗲𝘅𝘁.𝗷𝘀 (𝗻𝗲𝘅𝘁/𝗶𝗺𝗮𝗴𝗲)**
+Next.js provides **automatic image optimization** using the `<Image>` component from `next/image`. It improves performance by:
+- **Lazy loading** images.
+- **Serving responsive images** (adjusts size based on device).
+- **Automatically optimizing formats** (WebP, AVIF, etc.).
+- **Caching** and reducing unnecessary downloads.
+
+---
+
+## **✅ 1️⃣ Install Required Package (If Not Installed)**
+Next.js **already includes `next/image`**, but if missing, install it manually:
+
+---
+
+## **✅ 2️⃣ Basic Usage of `<Image>` in Next.js**
+📌 **Import and use the `<Image>` component:**
+```jsx
+import Image from "next/image";
+import profilePic from "@/public/profile.jpg"; // Importing a local image
+
+export default function Home() {
+  return (
+    <div>
+      <h1>Next.js Image Optimization</h1>
+      <Image
+        src={profilePic}   // Path to the image
+        alt="Profile Picture"
+        width={300}        // Set fixed width
+        height={300}       // Set fixed height
+        priority           // Loads image without lazy loading
+      />
+    </div>
+  );
+}
+```
+
+🔹 **𝙒𝒉𝙮 𝙪𝒔𝙚 `<𝙄𝒎𝙖𝒈𝙚>` 𝙞𝒏𝙨𝒕𝙚𝒂𝙙 𝙤𝒇 `<𝒊𝙢𝒈>`?**
+- It **automatically optimizes** images for different screen sizes.
+- **Faster loading** due to built-in lazy loading.
+- Supports **modern image formats** (like WebP) automatically.
+
+---
+
+## **✅ 3️⃣ 𝙐𝒔𝙞𝒏𝙜 𝙍𝒆𝙢𝒐𝙩𝒆 (𝙀𝒙𝙩𝒆𝙧𝒏𝙖𝒍) 𝙄𝒎𝙖𝒈𝙚𝒔**
+For images hosted externally (e.g., from a CDN), you **must allow domains in `next.config.js`**:
+
+📌 **Modify `next.config.js`:**
+```js
+module.exports = {
+  images: {
+    domains: ["example.com", "cdn.example.com"], // Allow specific external domains
+  },
+};
+```
+📌 **Use in a component:**
+```jsx
+<Image
+  src="https://example.com/image.jpg"
+  alt="Remote Image"
+  width={400}
+  height={300}
+  loader={({ src }) => src} // Optional: Custom loader for CDNs
+/>
+```
+🔹 **𝙒𝒉𝙮 𝙘𝒐𝙣𝒇𝙞𝒈𝙪𝒓𝙚 `𝒏𝙚𝒙𝙩.𝙘𝒐𝙣𝒇𝙞𝒈.𝒋𝙨`?**
+- Next.js blocks unknown external images for **security** and **performance reasons**.
+
+---
+
+## **✅ 4️⃣ 𝙍𝙚𝙨𝙥𝙤𝙣𝙨𝙞𝙫𝙚 𝙄𝙢𝙖𝙜𝙚𝙨 (𝘼𝙪𝙩𝙤𝙢𝙖𝙩𝙞𝙘 𝙎𝙞𝙯𝙚 𝘼𝙙𝙟𝙪𝙨𝙩𝙢𝙚𝙣𝙩𝙨)**
+📌 **Use `fill` to make images responsive:**
+```jsx
+<div style={{ position: "relative", width: "100%", height: "400px" }}>
+  <Image
+    src="/banner.jpg"
+    alt="Banner"
+    fill  // Makes the image cover the entire div
+    style={{ objectFit: "cover" }} // Controls how the image fits
+  />
+</div>
+```
+🔹 **Why use `fill`?**
+- The image **automatically scales** to fit the container.
+- **No need to manually set width & height**.
+
+---
+
+## **✅ 5️⃣ Dynamic Images (From API)**
+If you **don't know the image URL in advance** (e.g., from an API), use a **dynamic `src`**:
+
+```jsx
+export default function Product({ product }) {
+  return (
+    <Image
+      src={product.imageUrl} // Dynamic image URL
+      alt={product.name}
+      width={200}
+      height={200}
+      unoptimized // Disable optimization if needed
+    />
+  );
+}
+```
+🔹 **Why use `unoptimized`?**
+- For images **already optimized** (e.g., from a CDN like Cloudinary).
+
+---
+
+## **✅ 6️⃣ Blur Placeholder (For Better UX)**
+📌 **Show a blurred version while loading:**
+```jsx
+<Image
+  src="/profile.jpg"
+  alt="Blur Example"
+  width={300}
+  height={300}
+  placeholder="blur" // Enable blur effect
+  blurDataURL="data:image/png;base64,..." // Custom blur image (optional)
+/>
+```
+🔹 **Why use blur placeholders?**
+- **Smooth loading experience** (no flickering).
+- Useful for **large images**.
+
+---
+
+## **✅ 7️⃣ Next.js Image Loader (For Custom Optimization)**
+You can define a **custom image loader** (useful for Cloudinary, Imgix, etc.).
+
+📌 **Example: Using Cloudinary**
+```js
+const cloudinaryLoader = ({ src, width, quality }) => {
+  return `https://res.cloudinary.com/demo/image/upload/w_${width},q_${quality || 75}/${src}`;
+};
+
+<Image
+  loader={cloudinaryLoader}
+  src="my-image.jpg"
+  alt="Cloudinary Optimized Image"
+  width={400}
+  height={300}
+/>
+```
+🔹 **Why use a custom loader?**
+- Integrates **custom image CDNs** for better performance.
+
+---
+
+## **🔥 𝑺𝒖𝒎𝒎𝒂𝒓𝒚**
+✅ **Use `<Image>` instead of `<img>`** for **automatic optimization**.  
+✅ **Allow external images** in `next.config.js`.  
+✅ **Use `fill`** for **responsive images**.  
+✅ **Use `blur` placeholder** for smooth loading.  
+✅ **Use a custom loader** for external CDNs (Cloudinary, Imgix, etc.).  
+
+--------------------------------------------------------------------------------------------------------------------------
+
+# 🚀 **𝗙𝗼𝗻𝘁 𝗢𝗽𝘁𝗶𝗺𝗶𝘇𝗮𝘁𝗶𝗼𝗻 𝗶𝗻 𝗡𝗲𝘅𝘁.𝗷𝘀** 
+ 
+	1.Next.js provides **automatic font optimization** to improve performance by reducing layout shifts and loading times. 
+	2.You can optimize fonts using **Google Fonts, local fonts, or custom fonts**.
+	3.If we use the normal fonts then each time we load the site ,the server gets the request from where we to load the fonts ,
+	4.But if we use the Next JS font feature then it place the font in cache and don't send the request to server each we load the site which ultimatey increase the speed of our site.
+	
+---
+
+## ✅ **1️⃣ 𝑼𝒔𝒊𝒏𝒈 𝑮𝒐𝒐𝒈𝒍𝒆 𝑭𝒐𝒏𝒕𝒔 𝒘𝒊𝒕𝒉 `𝒏𝒆𝒙𝒕/𝒇𝒐𝒏𝒕/𝒈𝒐𝒐𝒈𝒍𝒆` (𝑩𝒆𝒔𝒕 𝑷𝒆𝒓𝒇𝒐𝒓𝒎𝒂𝒏𝒄𝒆)**
+
+Next.js **fetches, hosts, and optimizes** Google Fonts automatically.  
+
+### 📌 **Example: Importing Google Fonts in Next.js**  
+```jsx
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"], // Define character subsets
+  weight: ["400", "700"], // Choose font weights
+  variable: "--font-inter", // Define a CSS variable
+});
+
+export default function Home() {
+  return (
+    <div className={inter.className}>
+      <h1>Optimized Google Fonts in Next.js</h1>
+    </div>
+  );
+}
+```
+### 🔹 **Why use `next/font/google`?**
+✅ **Faster** than `<link>` in `_app.js`  
+✅ **Removes unused font styles**  
+✅ **Self-hosted, no external requests**  
+✅ **No Flash of Unstyled Text (FOUT)**  
+
+---
+
+## ✅ **2️⃣ 𝑼𝒔𝒊𝒏𝒈 𝑳𝒐𝒄𝒂𝒍 𝑭𝒐𝒏𝒕𝒔 𝒘𝒊𝒕𝒉 `𝒏𝒆𝒙𝒕/𝒇𝒐𝒏𝒕/𝒍𝒐𝒄𝒂𝒍`**
+For custom fonts stored in your project.
+
+### 📌 **Example: Using a Local Font**
+```jsx
+import localFont from "next/font/local";
+
+const myFont = localFont({
+  src: "../public/fonts/MyCustomFont.woff2",
+  display: "swap", // Avoid layout shifts
+});
+
+export default function Home() {
+  return (
+    <div className={myFont.className}>
+      <h1>Custom Local Font in Next.js</h1>
+    </div>
+  );
+}
+```
+### 🔹 **𝑾𝒉𝒚 𝒖𝒔𝒆 `𝒏𝒆𝒙𝒕/𝒇𝒐𝒏𝒕/𝒍𝒐𝒄𝒂𝒍`?**
+✅ **Great for branding** (custom fonts)  
+✅ **No external requests**  
+✅ **Optimized loading**  
+
+---
+
+
+## ✅ **3️⃣ 𝑼𝒔𝒊𝒏𝒈 𝑮𝒐𝒐𝒈𝒍𝒆 𝑭𝒐𝒏𝒕𝒔 𝒘𝒊𝒕𝒉 `_𝒂𝒑𝒑.𝒋𝒔` (𝑶𝒍𝒅 𝑴𝒆𝒕𝒉𝒐𝒅 - 𝑵𝒐𝒕 𝑹𝒆𝒄𝒐𝒎𝒎𝒆𝒏𝒅𝒆𝒅)**
+
+You can still use Google Fonts the **traditional way** by adding a `<link>` tag inside `_app.js`, but this is **less optimized** than `next/font/google`.
+
+### 📌 **Example: Adding Fonts in `_app.js`**
+```jsx
+import Head from "next/head";
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
+}
+```
+### 🔹 **𝗪𝗵𝘆 𝗶𝘀 𝘁𝗵𝗶𝘀 𝗻𝗼𝘁 𝗿𝗲𝗰𝗼𝗺𝗺𝗲𝗻𝗱𝗲𝗱?**
+❌ **Slower** (fetches fonts externally)  
+❌ **No font-subset optimization**  
+❌ **May cause layout shifts (FOIT/FOUT)**  
+
+---
+
+## ✅ **𝟒️⃣ 𝐀𝐩𝐩𝐥𝐲𝐢𝐧𝐠 𝐅𝐨𝐧𝐭𝐬 𝐢𝐧 𝐆𝐥𝐨𝐛𝐚𝐥 𝐂𝐒𝐒**
+If you're using **CSS Modules** or a global CSS file, define fonts in `globals.css`:
+
+### 📌 **Example: Applying Google Fonts in CSS**
+```css
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+```
+**⚠️ This method is also not optimized!** Use `next/font/google` instead.
+
+---
+
+## 🎯 **𝗪𝗵𝗶𝗰𝗵 𝗠𝗲𝘁𝗵𝗼𝗱 𝗦𝗵𝗼𝘂𝗹𝗱 𝗬𝗼𝘂 𝗨𝘀𝗲?**
+| Method                | Performance | Ease of Use | Recommended? |
+|----------------------|-------------|------------|-------------|
+| `next/font/google`  | ✅ ✅ ✅ **Best** | ✅ Easy | ✅ Yes |
+| `next/font/local`   | ✅ ✅ ✅ **Best for branding** | ✅ Easy | ✅ Yes |
+| `_app.js` `<link>`  | ❌ Slower  | ✅ Easy | ❌ No |
+| `@import` in CSS    | ❌ Slowest  | ✅ Easy | ❌ No |
+
+
+
+
+
+
+Note:
+1. 📌 Why Use className={roboto.className} in Next.js Fonts?
+Next.js provides automatic font optimization when using next/font/google. Instead of loading fonts via an external CDN (like in normal HTML/CSS), Next.js downloads and hosts the font locally for better performance and removes unnecessary font variations to reduce page load time.
+
+ 1️⃣ Import the Font Using next/font/google
+	In Next.js 13+ with App Router (app/), you import fonts like this:
+
+	import { Roboto } from "next/font/google";
+
+	const roboto = Roboto({
+	  subsets: ["latin"], // Optimized for Latin characters
+	  weight: "400", // Choose specific weights
+	});
+	🔹 This downloads the Google Font and optimizes it at build time.
+
+2. ✅ Using roboto.className ensures:
+
+	->Automatic optimization (loads only the needed font styles).
+	->Reduced CLS (Cumulative Layout Shift) – The page won’t shift while loading fonts.
+	-Local hosting of fonts instead of fetching from Google every time.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### **📌 𝗪𝗵𝗮𝘁 𝗶𝘀 𝗠𝗲𝘁𝗮𝗱𝗮𝘁𝗮 𝗶𝗻 𝗡𝗲𝘅𝘁.𝗷𝘀?** 
+ 
+**Metadata** refers to **information about a webpage** that helps browsers, search engines, and social media platforms understand its content. It includes:  
+✅ **Title** (`<title>`) – The page title displayed in the browser tab.  
+✅ **Description** (`<meta name="description">`) – A short summary shown in search results.  
+✅ **Keywords** (`<meta name="keywords">`) – Words that help search engines index your page.  
+✅ **OG Tags** (`og:title`, `og:image`, etc.) – Used for social media previews.  
+
+---
+
+ ## **📌 𝑺𝒕𝒂𝒕𝒊𝒄 𝒗𝒔 𝑫𝒚𝒏𝒂𝒎𝒊𝒄 𝑴𝒆𝒕𝒂𝒅𝒂𝒕𝒂**  :
+ 
+### **✅ 𝗦𝘁𝗮𝘁𝗶𝗰 𝗠𝗲𝘁𝗮𝗱𝗮𝘁𝗮**  
+When the metadata is the same for **every page**, it's called **static metadata**.  
+Example:  
+```jsx
+export const metadata = {
+  title: "My Next.js App",
+  description: "This is a static page with fixed metadata.",
+};
+```
+**🔹 Use Case:** A homepage or an About page with fixed content.  
+
+---
+
+### **✅ 𝗗𝘆𝗻𝗮𝗺𝗶𝗰 𝗠𝗲𝘁𝗮𝗱𝗮𝘁𝗮**  
+When the metadata **changes based on the page content**, it's called **dynamic metadata**.  
+For example, in a blog website, each blog post has a different title and description.
+
+#### **📌 How to Generate Dynamic Metadata?**  
+In **Next.js 13+ (App Router)**, you can use an **async function** to dynamically fetch metadata.
+
+```jsx
+export async function generateMetadata({ params }) {
+  // Fetch data from API or database
+  const post = await fetch(`https://dummyjson.com/posts/${params.id}`).then((res) => res.json());
+
+  return {
+    title: post.title,
+    description: post.body,
+  };
+}
+
+export default function BlogPost({ params }) {
+  return <h1>Blog Post {params.id}</h1>;
+}
+```
+🔹 Here, **metadata updates dynamically** based on the post ID.  
+🔹 The function **fetches the data** and returns a title & description **for each post**.
+
+---
+
+## **📌 𝗠𝗲𝘁𝗮𝗱𝗮𝘁𝗮 𝗶𝗻 `𝗻𝗲𝘅𝘁/𝗵𝗲𝗮𝗱` (𝗙𝗼𝗿 𝗣𝗮𝗴𝗲𝘀 𝗥𝗼𝘂𝘁𝗲𝗿)**
+
+If you're using the **old "Pages Router" (`pages/`)**, you can manually add metadata using `next/head`:
+```jsx
+import Head from "next/head";
+
+export default function Blog({ post }) {
+  return (
+    <>
+      <Head>
+        <title>{post.title}</title>
+        <meta name="description" content={post.body} />
+      </Head>
+      <h1>{post.title}</h1>
+    </>
+  );
+}
+```
+🔹 **This works but isn’t optimized as well as the App Router's `metadata` API.**  
+
+---
+
+## **📌 𝐒𝐄𝐎 𝐁𝐞𝐬𝐭 𝐏𝐫𝐚𝐜𝐭𝐢𝐜𝐞𝐬 𝐟𝐨𝐫 𝐌𝐞𝐭𝐚𝐝𝐚𝐭𝐚**
+
+✔ **Use clear and unique titles & descriptions** for each page.  
+✔ **Keep titles under 60 characters** and descriptions under **160 characters**.  
+✔ **Use Open Graph (`og:`) and Twitter (`twitter:`) meta tags** for social media sharing.  
+
+---
+
+## **🚀 Conclusion**
+✅ **Static Metadata** – Used when the same metadata applies to all pages.  
+✅ **Dynamic Metadata** – Generated based on API data or route params (e.g., blog posts).  
+✅ **Next.js 13+ (App Router)** provides an easy way to generate metadata dynamically using `generateMetadata()`.  
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+### 𝗦𝗰𝗿𝗶𝗽𝘁 𝗖𝗼𝗺𝗽𝗼𝗻𝗲𝗻𝘁 𝗜𝗻 𝗡𝗘𝗫𝗧 𝗝𝗦:
+
+In **Next.js**, the `next/script` component is used for loading external scripts efficiently. It helps with **lazy loading**, **priority management**, and **performance optimization**.  
+
+---
+
+## **𝗛𝗼𝘄 𝘁𝗼 𝗨𝘀𝗲 `<𝗦𝗰𝗿𝗶𝗽𝘁>` 𝗶𝗻 𝗡𝗲𝘅𝘁.𝗷𝘀**
+First, import the `Script` component:  
+
+```jsx
+import Script from "next/script";
+```
+
+### **1. Adding an External Script**
+```jsx
+import Script from "next/script";
+
+export default function Home() {
+  return (
+    <div>
+      <h1>Next.js Script Component Example</h1>
+      
+      {/* Adding an external script */}
+      <Script
+        src="https://example.com/script.js"
+        strategy="lazyOnload"
+        onLoad={() => console.log("Script loaded!")}
+      />
+    </div>
+  );
+}
+```
+**✅ Explanation:**  
+- `src="https://example.com/script.js"` → External script URL.  
+- `strategy="lazyOnload"` → Loads after the page has fully loaded.  
+- `onLoad={() => console.log("Script loaded!")}` → Executes a function when the script loads.  
+
+---
+
+### **𝟮. 𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝘁 𝗟𝗼𝗮𝗱𝗶𝗻𝗴 𝗦𝘁𝗿𝗮𝘁𝗲𝗴𝗶𝗲𝘀**
+| **Strategy**   | **When it Loads?** | **Use Case** |
+|---------------|-------------------|-------------|
+| `beforeInteractive` | Loads **before page hydration** | Essential scripts like authentication SDKs. |
+| `afterInteractive` | Loads **after page hydration** (default) | Analytics, tracking, non-critical scripts. |
+| `lazyOnload` | Loads **after page loads fully** | Ads, chat widgets, social media embeds. |
+
+Example:  
+```jsx
+<Script src="/analytics.js" strategy="beforeInteractive" />
+<Script src="/chat-widget.js" strategy="afterInteractive" />
+<Script src="/ads.js" strategy="lazyOnload" />
+```
+
+---
+
+### **3. Inline Scripts in Next.js**
+You can add inline scripts for custom logic:  
+```jsx
+<Script id="inline-script">
+  {`console.log("Inline script executed!");`}
+</Script>
+```
+
+---
+
+## **𝗪𝗵𝗲𝗻 𝘁𝗼 𝗨𝘀𝗲 `<𝗦𝗰𝗿𝗶𝗽𝘁>`?**
+✅ Loading **third-party** scripts (Google Analytics, Chatbots, etc.).  
+✅ Preventing **render-blocking** by delaying script execution.  
+✅ Ensuring scripts load in the right **priority order**.  
+
+Note:
+This script component load that external js file which we laod through Script component of Next JS in that particular component only but normal html script loads in complete website.
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+## Loader In Next Js:
+ To make  Loader make a loading.js file inside that component and if there is any data to come it automatically fist shows laoder then data will come.
+ 
+
+----------------------------------------------------------
+## 𝐒𝐭𝐚𝐭𝐢𝐜 𝐀𝐬𝐬𝐞𝐭𝐬 𝐈𝐧 𝐍𝐄𝐗𝐓𝐉𝐒:
+	1.In Next.js, static assets like images, fonts, and other files should be stored in the public/ folder. This allows direct access without needing an import or special handling.
+	2.All these sttaic asest don't get chnage when we make the production build as all other get minified when we make the build and thses files are not much secure .
+	3.Also we keep the SEO related things here like roboto.txt,sitemal.xml,etc
+
+1️⃣ 𝑾𝒉𝒆𝒓𝒆 𝒕𝒐 𝑺𝒕𝒐𝒓𝒆 𝑺𝒕𝒂𝒕𝒊𝒄 𝑨𝒔𝒔𝒆𝒕𝒔?
+
+Next.js serves all files placed inside the public/ folder at the root level of your project.
+
+ba
+/my-next-app
+│── /public
+│   ├── images/
+│   │   ├── logo.png
+│   │   ├── banner.jpg
+│   ├── favicon.ico
+│   ├── robots.txt
+│   ├── fonts/
+│   │   ├── custom-font.woff2
+│── /pages
+│── /components
+│── /styles
+│── next.config.js
+│── package.json
+
+2️⃣ Using Static Assets in Next.js
+✅ Using Images in public/
+You can reference static images using absolute paths from public/.
+
+export default function Home() {
+  return (
+    <div>
+      <h1>Welcome to Next.js</h1>
+      <img src="/images/logo.png" alt="Logo" width={200} height={100} />
+    </div>
+  );
+}
+✅ No need to import images.
+✅ Uses absolute paths starting from /public/.
+❌ No automatic optimization (use next/image for better performance).
+
+✅ Using next/image for Optimized Images
+Next.js provides an optimized Image component for better performance, lazy loading, and automatic resizing.
+
+import Image from "next/image";
+
+export default function Home() {
+  return (
+    <div>
+      <h1>Next.js Optimized Image</h1>
+      <Image 
+        src="/images/logo.png" 
+        alt="Logo" 
+        width={200} 
+        height={100} 
+        priority 
+      />
+    </div>
+  );
+}
+𝐍𝐨𝐭𝐞:
+✅ Optimized for performance.
+✅ Supports lazy loading, automatic resizing, and blur-up placeholders.
+✅ Use priority for important images to load immediately.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📌 𝑾𝒉𝒂𝒕 𝒊𝒔 𝒂 𝑩𝒖𝒊𝒍𝒅 𝒊𝒏 𝑵𝒆𝒙𝒕.𝒋𝒔?
+A build in Next.js refers to the process of compiling, optimizing, and bundling the application to make it production-ready. It transforms the code into a highly efficient format suitable for deployment.
+
+
+📌 𝐖𝐡𝐚𝐭 𝐢𝐬 𝐚 𝐁𝐮𝐢𝐥𝐝 𝐢𝐧 𝐍𝐞𝐱𝐭.𝐣𝐬?
+A build in Next.js refers to the process of compiling, optimizing, and bundling the application to make it production-ready. It transforms the code into a highly efficient format suitable for deployment.
+
+🚀 𝐓𝐲𝐩𝐞𝐬 𝐨𝐟 𝐁𝐮𝐢𝐥𝐝𝐬 𝐢𝐧 𝐍𝐞𝐱𝐭.𝐣𝐬
+Next.js offers different types of builds based on the needs of the application:
+
+𝟏️⃣ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭 𝐁𝐮𝐢𝐥𝐝 (𝐧𝐞𝐱𝐭 𝐝𝐞𝐯)
+	Used during development.
+	Runs a local server with hot reloading.
+	Fast but not optimized.
+	Uses dynamic compilation, which means every request is processed in real-time.
+	
+	Command:
+	npm run dev or  yarn dev
+	
+	🔹 Use case: When actively coding and debugging.
+
+--------------
+
+𝟐️⃣ 𝐏𝐫𝐨𝐝𝐮𝐜𝐭𝐢𝐨𝐧 𝐁𝐮𝐢𝐥𝐝 (𝐧𝐞𝐱𝐭 𝐛𝐮𝐢𝐥𝐝)
+	Creates an optimized version of the application.
+	Pre-renders pages (SSG/ISR).
+	Minifies JavaScript and CSS for faster performance.
+	Generates static assets and server-side rendered components.
+
+Command: npm run build or yarn build
+
+🔹 Use case: Preparing the app for deployment.
+
+--------------
+
+3️⃣ Static Export (next export)
+Converts a Next.js app into a fully static site.
+Generates HTML and CSS files for every page.
+Useful for static hosting (e.g., GitHub Pages, Vercel, Netlify).
+
+Command:npm run build
+npm run export
+
+ Use case: When hosting on a CDN or a static hosting provider.
+
+--------------
+
+4️⃣ Serverless Build
+Converts Next.js API routes and pages into serverless functions.
+Used when deploying to Vercel, AWS Lambda, or Netlify Functions.
+Command:
+
+NEXT_PUBLIC_BUILD_TARGET=serverless npm run build
+
+🔹 Use case: Deploying to a serverless environment like AWS Lambda.
+
+
+--------------
+💡 𝐇𝐨𝐰 𝐭𝐨 𝐂𝐫𝐞𝐚𝐭𝐞 𝐚 𝐏𝐫𝐨𝐝𝐮𝐜𝐭𝐢𝐨𝐧 𝐁𝐮𝐢𝐥𝐝 𝐢𝐧 𝐍𝐞𝐱𝐭.𝐣𝐬
+Step 1: Install Dependencies
+Ensure that all dependencies are installed:
+npm install
+
+Step 2: Run the Build Command
+npm run build
+or
+yarn build
+
+Step 3: Start the Production Server
+After the build, you can run:
+npm run start
+
+This starts the optimized production server.
+
+🔹 What Happens During next build?
+	Compiles & Bundles: Next.js compiles all pages into static or server-side rendered versions.
+	Minifies Code: Reduces JavaScript & CSS file sizes.
+	Optimizes Images: Uses Next.js image optimization.
+	Removes Unused Code: Tree-shaking eliminates unused JavaScript.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+### **📌 𝑾𝒉𝒂𝒕 𝒊𝒔 𝑺𝒕𝒂𝒕𝒊𝒄 𝑯𝑻𝑴𝑳 𝒊𝒏 𝑵𝒆𝒙𝒕.𝒋𝒔?**  
+In **Next.js**, **Static HTML** refers to pages that are pre-generated at **build time** and served as simple `.html` files without requiring a Node.js server.
+These pages are fast, efficient, and can be deployed to **CDNs (Content Delivery Networks) like Vercel, Netlify, or GitHub Pages**.
+
+---
+
+## **🚀 𝐇𝐨𝐰 𝐒𝐭𝐚𝐭𝐢𝐜 𝐇𝐓𝐌𝐋 𝐖𝐨𝐫𝐤𝐬 𝐢𝐧 𝐍𝐞𝐱𝐭.𝐣𝐬?**
+
+Next.js automatically **exports pages as static HTML** if they meet these conditions:
+1. **No `getServerSideProps()`** → The page does not fetch dynamic data on each request.
+2. **Uses `getStaticProps()`** → The page fetches data **at build time**.
+3. **No API Routes Used** → API calls must be handled externally.
+4. **No `useEffect()` for Fetching Data** → If fetching inside `useEffect()`, it won't be included in the static build.
+
+---
+
+## **🔹 𝐇𝐨𝐰 𝐭𝐨 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞 𝐒𝐭𝐚𝐭𝐢𝐜 𝐇𝐓𝐌𝐋 𝐢𝐧 𝐍𝐞𝐱𝐭.𝐣𝐬**
+
+There are **two ways** to create a **static HTML page** in Next.js:
+
+### **1️⃣ 𝐷𝑒𝑓𝑎𝑢𝑙𝑡 𝑆𝑡𝑎𝑡𝑖𝑐 𝑃𝑎𝑔𝑒𝑠 (𝑁𝑜 𝐷𝑎𝑡𝑎 𝐹𝑒𝑡𝑐ℎ𝑖𝑛𝑔)**
+Any page without `getStaticProps` or `getServerSideProps` will automatically be **exported as static HTML**.
+
+```jsx
+// pages/about.js
+export default function About() {
+  return <h1>About Page (Static HTML)</h1>;
+}
+```
+✅ This page is **static** and will be included as a `.html` file in the output.
+
+---
+
+### **2️⃣ 𝑈𝑠𝑖𝑛𝑔 `𝑔𝑒𝑡𝑆𝑡𝑎𝑡𝑖𝑐𝑃𝑟𝑜𝑝𝑠()` 𝑓𝑜𝑟 𝑃𝑟𝑒-𝑟𝑒𝑛𝑑𝑒𝑟𝑖𝑛𝑔**
+If a page needs **fetched data** but can be pre-generated at **build time**, use `getStaticProps()`.
+
+```jsx
+// pages/products.js
+export async function getStaticProps() {
+  const res = await fetch("https://dummyjson.com/products");
+  const data = await res.json();
+
+  return {
+    props: { products: data.products },
+  };
+}
+
+export default function Products({ products }) {
+  return (
+    <div>
+      <h1>Products List</h1>
+      <ul>
+        {products.map((product) => (
+          <li key={product.id}>{product.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+```
+✅ This page **fetches product data at build time** and generates a static HTML file.
+
+---
+
+## **💡 𝐇𝐨𝐰 𝐭𝐨 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞 𝐒𝐭𝐚𝐭𝐢𝐜 𝐇𝐓𝐌𝐋 (`𝐧𝐞𝐱𝐭 𝐞𝐱𝐩𝐨𝐫𝐭`)?**
+
+To **export all static pages as HTML**, use:
+
+npm run build
+npm run export
+```
+This will create a `/out` folder containing **only static files (`.html`, `.css`, `.js`)**.
+
+---
+
+
+## **🛠 𝑾𝒉𝒆𝒏 𝒕𝒐 𝑼𝒔𝒆 𝑺𝒕𝒂𝒕𝒊𝒄 𝑯𝑻𝑴𝑳?**
+
+✅ **Best for SEO** → Google can index pre-rendered pages.  
+✅ **Faster Load Times** → No backend processing on each request.  
+✅ **Works on Any Hosting** → Deploy on **GitHub Pages, Netlify, or Vercel**.  
+✅ **No Need for a Server** → Just a CDN is enough.  
+
+---
+
+## **🔹 𝑾𝒉𝒆𝒏 𝑵𝑶𝑻 𝒕𝒐 𝑼𝒔𝒆 𝑺𝒕𝒂𝒕𝒊𝒄 𝑯𝑻𝑴𝑳?**
+❌ If the page needs **real-time data updates**.  
+❌ If data changes **frequently** and must be updated on every request.  
+❌ If using **user-specific content** (like authentication).  
+
+---
+
+## **🔥 𝐄𝐱𝐚𝐦𝐩𝐥𝐞: 𝐒𝐭𝐚𝐭𝐢𝐜 𝐯𝐬 𝐃𝐲𝐧𝐚𝐦𝐢𝐜**
+
+| Feature             | Static HTML (`getStaticProps`) | Dynamic (`getServerSideProps`) |
+|---------------------|--------------------------------|--------------------------------|
+| **Generated**       | At **build time**             | On **every request**          |
+| **Performance**     | ⚡ **Very fast (CDN cached)** | 🐢 Slower (Runs server-side)  |
+| **Best for**        | Blogs, Landing Pages, Docs   | Dashboards, User Profiles    |
+
+---
+
+## **🎯 𝐂𝐨𝐧𝐜𝐥𝐮𝐬𝐢𝐨𝐧**
+✅ **Static HTML in Next.js** makes websites **blazing fast and scalable**.  
+✅ Use **`next export`** to **convert Next.js to a pure static site**.  
+✅ Works best for **blogs, landing pages, and public content**.  
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 𝗥𝗲𝗱𝗶𝗿𝗲𝗰𝘁𝗶𝗼𝗻 𝗶𝗡 𝗡𝗘𝗫𝗧𝗝𝗦:
+
+
+In **Next.js**, you can handle **redirections** in multiple ways depending on whether you need **server-side**, **client-side**, or **API-based** redirects. Here’s a breakdown:
+
+---
+
+## **𝟏️⃣ 𝐑𝐞𝐝𝐢𝐫𝐞𝐜𝐭 𝐢𝐧 `𝐧𝐞𝐱𝐭.𝐜𝐨𝐧𝐟𝐢𝐠.𝐣𝐬` (𝐒𝐭𝐚𝐭𝐢𝐜 𝐑𝐞𝐝𝐢𝐫𝐞𝐜𝐭𝐬)**
+You can define permanent or temporary redirects at the **server level** using `next.config.js`.
+
+🔹 **Example: Redirect `/old-route` to `/new-route`**
+```javascript
+// next.config.js
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: "/old-route",
+        destination: "/new-route",
+        permanent: true, // `true` sends a 308 Permanent Redirect
+      },
+    ];
+  },
+};
+```
+✅ **Best for:** SEO-friendly redirects that are handled at the **server level**.
+
+---
+
+## **𝟐️⃣ 𝐑𝐞𝐝𝐢𝐫𝐞𝐜𝐭 𝐢𝐧 `𝐠𝐞𝐭𝐒𝐞𝐫𝐯𝐞𝐫𝐒𝐢𝐝𝐞𝐏𝐫𝐨𝐩𝐬` (𝐒𝐞𝐫𝐯𝐞𝐫-𝐒𝐢𝐝𝐞 𝐑𝐞𝐝𝐢𝐫𝐞𝐜𝐭)**
+This method is useful when you need to check conditions **on each request**.
+
+🔹 **Example: Redirect based on authentication**
+```javascript
+export async function getServerSideProps(context) {
+  const { req } = context;
+  const user = req.cookies.token; // Example: Check if a user is logged in
+
+  if (!user) {
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false, // Temporary redirect (307)
+      },
+    };
+  }
+
+  return { props: {} }; // Continue rendering the page if user is logged in
+}
+```
+✅ **Best for:** Redirecting users based on **authentication, roles, or dynamic conditions**.
+
+---
+
+## **𝟑️⃣ 𝐑𝐞𝐝𝐢𝐫𝐞𝐜𝐭 𝐢𝐧 `𝐮𝐬𝐞𝐑𝐨𝐮𝐭𝐞𝐫` (𝐂𝐥𝐢𝐞𝐧𝐭-𝐒𝐢𝐝𝐞 𝐑𝐞𝐝𝐢𝐫𝐞𝐜𝐭)**
+For redirects **inside components** (e.g., after a button click), use the **Next.js Router**.
+
+🔹 **Example: Redirect when a button is clicked**
+```javascript
+import { useRouter } from "next/router";
+
+export default function HomePage() {
+  const router = useRouter();
+
+  const handleRedirect = () => {
+    router.push("/dashboard"); // Redirect to dashboard
+  };
+
+  return <button onClick={handleRedirect}>Go to Dashboard</button>;
+}
+```
+✅ **Best for:** **Navigation inside components**, such as redirects after a button click.
+
+---
+
+## **𝟒️⃣ 𝐑𝐞𝐝𝐢𝐫𝐞𝐜𝐭 𝐢𝐧 𝐀𝐏𝐈 𝐑𝐨𝐮𝐭𝐞𝐬**
+If you need to handle redirects from an API, you can use `res.redirect()` in a Next.js API route.
+
+🔹 **Example: Redirect from an API route**
+```javascript
+export default function handler(req, res) {
+  res.writeHead(302, { Location: "/new-route" });
+  res.end();
+}
+```
+✅ **Best for:** Redirecting users after a form submission or an API call.
+
+---
+## **𝟒️⃣ 𝐑𝐞𝐝𝐢𝐫𝐞𝐜𝐭 𝐢𝐧 𝐀𝐏𝐈 𝐑𝐨𝐮𝐭𝐞𝐬**
+| **Method** | **Use Case** |
+|------------|-------------|
+| **next.config.js** | Best for **static, SEO-friendly redirects**. |
+| **getServerSideProps** | Use when **checking conditions dynamically (authentication, permissions, etc.)**. |
+| **useRouter** | For **client-side navigation (button clicks, after login, etc.)**. |
+| **API Route** | Use when **handling redirects inside an API request**. |
+
+---
+
+
+
+
+
+import Image from "next/image";
+import styles from "./page.module.css";
+
+export default function Home() {
+  return (
+    <div className={styles.page}>
+      <main className={styles.main}>
+       <h1>Export Static HTML Page WIth Build</h1>
+      </main>
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nesting layouts
+By default, layouts in the folder hierarchy are also nested, which means they wrap child layouts via their children prop. You can nest layouts by adding layout inside specific route segments (folders).
+
+For example, to create a layout for the /blog route, add a new layout file inside the blog folder.
+
+File hierarchy showing root layout wrapping the blog layout
+app/blog/layout.tsx
+
+export default function BlogLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return <section>{children}</section>
+}
+If you were to combine the two layouts above, the root layout (app/layout.js) would wrap the blog layout (app/blog/layout.js), which would wrap the blog (app/blog/page.js) and blog post page (app/blog/[slug]/page.js).
+
+##Creating a nested route
+A nested route is a route composed of multiple URL segments. For example, the /blog/[slug] route is composed of three segments:
+
+/ (Root Segment)
+blog (Segment)
+[slug] (Leaf Segment)
+In Next.js:
+
+Folders are used to define the route segments that map to URL segments.
+Files (like page and layout) are used to create UI that is shown for a segment.
+To create nested routes, you can nest folders inside each other. For example, to add a route for /blog, create a folder called blog in the app directory. Then, to make /blog publicly accessible, add a page file:
+
+File hierarchy showing blog folder and a page.js file
+app/blog/page.tsx
+TypeScript
+
+TypeScript
+
+import { getPosts } from '@/lib/posts'
+import { Post } from '@/ui/post'
+ 
+export default async function Page() {
+  const posts = await getPosts()
+ 
+  return (
+    <ul>
+      {posts.map((post) => (
+        <Post key={post.id} post={post} />
+      ))}
+    </ul>
+  )
+}
+You can continue nesting folders to create nested routes. For example, to create a route for a specific blog post, create a new [slug] folder inside blog and add a page file:
+
+File hierarchy showing blog folder with a nested slug folder and a page.js file
+app/blog/[slug]/page.tsx
+TypeScript
+
+TypeScript
+
+function generateStaticParams() {}
+ 
+export default function Page() {
+  return <h1>Hello, Blog Post Page!</h1>
+}
+Good to know: Wrapping a folder name in square brackets (e.g. [slug]) creates a special dynamic route segment used to generate multiple pages from data. This is useful for blog posts, product pages, etc.
+
+.ves-megamenu .navigation .services-menu .right-sidebar .imageAndText-container .imageAndText-small .imageAndText-info a.widget-button {
+    background-color: #D6D2C4!important;
+    border: none;
+    width: 205px;
+    font-weight: 500 !important;
+    letter-spacing: 0.64px;
+    color: #575257;
+}
+
+.ves-megamenu .inspiration-container .dropdown-menu .submenu-inner .item-content > .nav-dropdown .imageAndText--left .imageAndText-container .imageAndText-small a.widget-button {
+    width: 165px;
+    min-width: 165px;
+    color: #575257;
+}
+
+   .page-wrapper.collections div#Versailles .imageAndText--hasCta.imageAndText--1-image .imageAndText-container .imageAndText-info,
+    .page-wrapper.collections div#Chambord .imageAndText--hasCta.imageAndText--1-image .imageAndText-container .imageAndText-info,
+    .page-wrapper.collections div#Cheverny .imageAndText--hasCta.imageAndText--1-image .imageAndText-container .imageAndText-info,
+    .page-wrapper.collections div#Bardilino .imageAndText--hasCta.imageAndText--1-image .imageAndText-container .imageAndText-info,
+    .page-wrapper.collections div#Chevron .imageAndText--hasCta.imageAndText--1-image .imageAndText-container .imageAndText-info,
+    .page-wrapper.collections div#Chevron .imageAndText--hasCta.imageAndText--1-image .imageAndText-container .imageAndText-info,
+    .page-wrapper.collections div#Borders .imageAndText--hasCta.imageAndText--1-image .imageAndText-container .imageAndText-info,
+    .page-wrapper.collections .the3ComponentsSection .imageAndText--hasCta.imageAndText--1-image .imageAndText-container .imageAndText-info,
+    .page-wrapper.collections .chevronLayingPattern .imageAndText--hasCta.imageAndText--1-image .imageAndText-container .imageAndText-info,
+    .page-wrapper.collections .OneBox16Plank .imageAndText--hasCta.imageAndText--1-image .imageAndText-container .imageAndText-info
