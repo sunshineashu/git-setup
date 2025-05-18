@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="northstar_cellarcategorymetadata_cellarcategorymetadata" resource="default" engine="innodb" comment="northstar_cellarcategorymetadata_cellarcategorymetadata Table">
+		<column xsi:type="int" name="cellarcategorymetadata_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="cellarcategorymetadata_id"/>
+		</constraint>
+		<column name="customwinecellarid_id" nullable="false" xsi:type="int" comment="customwinecellarid_id" identity="false"/>
+		<column name="category_id" nullable="true" xsi:type="int" comment="category_id" identity="false"/>
+		<column name="cellar_title" nullable="true" xsi:type="text" comment="cellar_title"/>
+		<column name="cellar_description" nullable="true" xsi:type="text" comment="cellar_description"/>
+		<column name="cellar_main_image" nullable="true" xsi:type="text" comment="cellar_main_image"/>
+		     <!-- Composite unique key on customwinecellarid_id and category_id -->
+        <constraint xsi:type="unique" referenceId="UNQ_CUSTOMCELLAR_CATEGORY">
+            <column name="customwinecellarid_id"/>
+            <column name="category_id"/>
+        </constraint>
+	</table>
+</schema>

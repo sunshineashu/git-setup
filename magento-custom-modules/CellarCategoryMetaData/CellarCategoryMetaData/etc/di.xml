@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Northstar\CellarCategoryMetaData\Api\CellarcategorymetadataRepositoryInterface" type="Northstar\CellarCategoryMetaData\Model\CellarcategorymetadataRepository"/>
+	<preference for="Northstar\CellarCategoryMetaData\Api\Data\CellarcategorymetadataInterface" type="Northstar\CellarCategoryMetaData\Model\Cellarcategorymetadata"/>
+	<preference for="Northstar\CellarCategoryMetaData\Api\Data\CellarcategorymetadataSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Northstar\CellarCategoryMetaData\Model\ResourceModel\Cellarcategorymetadata\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">northstar_cellarcategorymetadata_cellarcategorymetadata</argument>
+			<argument name="resourceModel" xsi:type="string">Northstar\CellarCategoryMetaData\Model\ResourceModel\Cellarcategorymetadata\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="northstar_cellarcategorymetadata_cellarcategorymetadata_listing_data_source" xsi:type="string">Northstar\CellarCategoryMetaData\Model\ResourceModel\Cellarcategorymetadata\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+
+</config>
